@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>蕎麦職人ゲーム</title>
+<style>
+body{
+font-family:sans-serif;
+background:#222;
+color:white;
+text-align:center;
+padding:20px;
+}
+button{
+padding:15px;
+margin:10px;
+font-size:18px;
+}
+</style>
+</head>
+
+<body>
+
+<h1>蕎麦職人ゲーム 🍜</h1>
+
+<p id="text">水回し：どうする？</p>
+
+<button onclick="a()">少しずつ水を入れる</button>
+<button onclick="b()">一気に入れる</button>
+
+<p id="result"></p>
+
+<script>
+
+let score=0
+
+function a(){
+score+=10
+finish()
+}
+
+function b(){
+score+=0
+finish()
+}
+
+function finish(){
+
+let rank=""
+
+if(score>=10){
+rank="職人"
+}else{
+rank="見習い"
+}
+
+document.getElementById("result").innerHTML="称号："+rank
+
+}
+
+</script>
+
+</body>
+</html>
